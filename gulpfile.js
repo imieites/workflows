@@ -39,3 +39,5 @@ gulp.task('compass', function(){
             .on('error', gutil.log))
         .pipe(gulp.dest('builds/development/css'))
 });
+
+gulp.task('default',['coffee', 'js', 'compass']); // la que se llama default es la que se ejecuta cuando ejecutas gulp sin parametros.
