@@ -11,5 +11,9 @@
     "url": "?.git"
   },
   "author": "Ignacio Mieites",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-util": "^3.0.2"
+  }
 }
