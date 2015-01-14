@@ -46,4 +46,4 @@ gulp.task('watch', function(){
     gulp.watch('components/sass/*.scss', ['compass']);
 })
 
-gulp.task('default',['coffee', 'js', 'compass']); // la que se llama default es la que se ejecuta cuando ejecutas gulp sin parametros.
+gulp.task('default',['coffee', 'js', 'compass', 'watch']); // la que se llama default es la que se ejecuta cuando ejecutas gulp sin parametros.
