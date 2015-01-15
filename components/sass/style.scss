@@ -3,6 +3,7 @@
  
 //Compass imports
 @import "compass";
+@import "compass/reset"; // los browsers by default tienen ciertos estilos, como un border alrededor del body. con esto lo saco.
 @import "compass/css3/box-shadow";
  
 //Core partials
