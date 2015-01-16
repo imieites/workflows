@@ -3,12 +3,12 @@
 1 verbose cli   '/usr/local/bin/npm',
 1 verbose cli   'install',
 1 verbose cli   '--save-dev',
-1 verbose cli   'gulp-json-minify' ]
+1 verbose cli   'gulp-pngcrush' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
 4 verbose readDependencies using package.json deps
-5 verbose cache add [ 'gulp-json-minify', null ]
-6 verbose cache add name=undefined spec="gulp-json-minify" args=["gulp-json-minify",null]
+5 verbose cache add [ 'gulp-pngcrush', null ]
+6 verbose cache add name=undefined spec="gulp-pngcrush" args=["gulp-pngcrush",null]
 7 verbose parsed url { protocol: null,
 7 verbose parsed url   slashes: null,
 7 verbose parsed url   auth: null,
@@ -18,69 +18,69 @@
 7 verbose parsed url   hash: null,
 7 verbose parsed url   search: null,
 7 verbose parsed url   query: null,
-7 verbose parsed url   pathname: 'gulp-json-minify',
-7 verbose parsed url   path: 'gulp-json-minify',
-7 verbose parsed url   href: 'gulp-json-minify' }
-8 silly lockFile 1f060bc2-gulp-json-minify gulp-json-minify
-9 verbose lock gulp-json-minify /Users/ndh/.npm/1f060bc2-gulp-json-minify.lock
-10 silly lockFile 1f060bc2-gulp-json-minify gulp-json-minify
-11 silly lockFile 1f060bc2-gulp-json-minify gulp-json-minify
-12 verbose addNamed [ 'gulp-json-minify', '' ]
+7 verbose parsed url   pathname: 'gulp-pngcrush',
+7 verbose parsed url   path: 'gulp-pngcrush',
+7 verbose parsed url   href: 'gulp-pngcrush' }
+8 silly lockFile 41c9768c-gulp-pngcrush gulp-pngcrush
+9 verbose lock gulp-pngcrush /Users/ndh/.npm/41c9768c-gulp-pngcrush.lock
+10 silly lockFile 41c9768c-gulp-pngcrush gulp-pngcrush
+11 silly lockFile 41c9768c-gulp-pngcrush gulp-pngcrush
+12 verbose addNamed [ 'gulp-pngcrush', '' ]
 13 verbose addNamed [ null, '*' ]
-14 silly lockFile e177bdeb-gulp-json-minify gulp-json-minify@
-15 verbose lock gulp-json-minify@ /Users/ndh/.npm/e177bdeb-gulp-json-minify.lock
-16 silly addNameRange { name: 'gulp-json-minify', range: '*', hasData: false }
-17 verbose request where is /gulp-json-minify
+14 silly lockFile 326fb124-gulp-pngcrush gulp-pngcrush@
+15 verbose lock gulp-pngcrush@ /Users/ndh/.npm/326fb124-gulp-pngcrush.lock
+16 silly addNameRange { name: 'gulp-pngcrush', range: '*', hasData: false }
+17 verbose request where is /gulp-pngcrush
 18 verbose request registry https://registry.npmjs.org/
-19 verbose request id a7f463d7460ac644
-20 verbose url raw /gulp-json-minify
-21 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-json-minify' ]
-22 verbose url resolved https://registry.npmjs.org/gulp-json-minify
-23 verbose request where is https://registry.npmjs.org/gulp-json-minify
-24 info trying registry request attempt 1 at 16:01:42
-25 http GET https://registry.npmjs.org/gulp-json-minify
-26 http 404 https://registry.npmjs.org/gulp-json-minify
-27 verbose headers { date: 'Fri, 16 Jan 2015 19:01:44 GMT',
-27 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+19 verbose request id a16aa23c77b15d55
+20 verbose url raw /gulp-pngcrush
+21 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-pngcrush' ]
+22 verbose url resolved https://registry.npmjs.org/gulp-pngcrush
+23 verbose request where is https://registry.npmjs.org/gulp-pngcrush
+24 info trying registry request attempt 1 at 16:26:52
+25 http GET https://registry.npmjs.org/gulp-pngcrush
+26 http 404 https://registry.npmjs.org/gulp-pngcrush
+27 verbose headers { date: 'Fri, 16 Jan 2015 19:26:53 GMT',
+27 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
 27 verbose headers   'content-type': 'application/json',
 27 verbose headers   'cache-control': 'max-age=0',
 27 verbose headers   'content-length': '52',
 27 verbose headers   'accept-ranges': 'bytes',
 27 verbose headers   via: '1.1 varnish',
 27 verbose headers   age: '0',
-27 verbose headers   'x-served-by': 'cache-iad2136-IAD',
+27 verbose headers   'x-served-by': 'cache-iad2140-IAD',
 27 verbose headers   'x-cache': 'MISS',
 27 verbose headers   'x-cache-hits': '0',
-27 verbose headers   'x-timer': 'S1421434903.990664,VS0,VE19',
+27 verbose headers   'x-timer': 'S1421436413.596742,VS0,VE84',
 27 verbose headers   'keep-alive': 'timeout=10, max=50',
 27 verbose headers   connection: 'Keep-Alive' }
 28 silly registry.get cb [ 404,
-28 silly registry.get   { date: 'Fri, 16 Jan 2015 19:01:44 GMT',
-28 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+28 silly registry.get   { date: 'Fri, 16 Jan 2015 19:26:53 GMT',
+28 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
 28 silly registry.get     'content-type': 'application/json',
 28 silly registry.get     'cache-control': 'max-age=0',
 28 silly registry.get     'content-length': '52',
 28 silly registry.get     'accept-ranges': 'bytes',
 28 silly registry.get     via: '1.1 varnish',
 28 silly registry.get     age: '0',
-28 silly registry.get     'x-served-by': 'cache-iad2136-IAD',
+28 silly registry.get     'x-served-by': 'cache-iad2140-IAD',
 28 silly registry.get     'x-cache': 'MISS',
 28 silly registry.get     'x-cache-hits': '0',
-28 silly registry.get     'x-timer': 'S1421434903.990664,VS0,VE19',
+28 silly registry.get     'x-timer': 'S1421436413.596742,VS0,VE84',
 28 silly registry.get     'keep-alive': 'timeout=10, max=50',
 28 silly registry.get     connection: 'Keep-Alive' } ]
-29 silly lockFile e177bdeb-gulp-json-minify gulp-json-minify@
-30 silly lockFile e177bdeb-gulp-json-minify gulp-json-minify@
-31 error 404 404 Not Found: gulp-json-minify
+29 silly lockFile 326fb124-gulp-pngcrush gulp-pngcrush@
+30 silly lockFile 326fb124-gulp-pngcrush gulp-pngcrush@
+31 error 404 404 Not Found: gulp-pngcrush
 31 error 404
-31 error 404 'gulp-json-minify' is not in the npm registry.
+31 error 404 'gulp-pngcrush' is not in the npm registry.
 31 error 404 You should bug the author to publish it
 31 error 404 It was specified as a dependency of 'workflows'
 31 error 404
 31 error 404 Note that you can also install from a
 31 error 404 tarball, folder, or http url, or git url.
 32 error System Darwin 14.0.0
-33 error command "node" "/usr/local/bin/npm" "install" "--save-dev" "gulp-json-minify"
+33 error command "node" "/usr/local/bin/npm" "install" "--save-dev" "gulp-pngcrush"
 34 error cwd /Users/ndh/Documents/dev/webWorkflows/workflows
 35 error node -v v0.10.33
 36 error npm -v 1.4.28

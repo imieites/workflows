@@ -8,6 +8,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     minifyHTML = require('gulp-minify-html'),
     jsonMinify = require('gulp-jsonminify'),
+    imageMin = require('gulp-imagemin'),
+    pngCrush = require('imagemin-pngcrush'),
     compass = require('gulp-compass');
 
 var env,
@@ -76,6 +78,7 @@ gulp.task('watch', function(){
     gulp.watch('components/sass/*.scss', ['compass']);
     gulp.watch('builds/development/*.html', ['html']); // esto lo hardcodeo porque el unico html base que hay no esta en ambos ambientes, no puedo usar outputDir
     gulp.watch('builds/development/js/*.json', ['json']);
+    gulp.watch('builds/development/images/**/*.*', ['images']);
 })
 
 gulp.task('html', function(){
@@ -84,6 +87,18 @@ gulp.task('html', function(){
     .pipe(gulpif(env === 'production', gulp.dest(outputDir)))
     .pipe(connect.reload())
 });
+
+gulp.task('images', function(){
+    gulp.src('builds/development/images/**/*.*')  // las 2 estrellas es '' cualquier subfolder ''
+    .pipe(gulpif(env === 'production', imageMin({
+        progressive: true,
+        svgoPlugins: [{ removeViewBox: false }],
+        use: [pngCrush()]
+
+    })))
+    .pipe(gulpif(env === 'production', gulp.dest(outputDir + 'images')))
+    .pipe(connect.reload())
+})
 
 gulp.task('json', function(){
     gulp.src('builds/development/js/*.json')
@@ -99,4 +114,4 @@ gulp.task('connect', function(){
     });
 });
 
-gulp.task('default',['coffee', 'js', 'compass', 'html', 'json', 'connect', 'watch']); // la que se llama default es la que se ejecuta cuando ejecutas gulp sin parametros.
+gulp.task('default',['coffee', 'js', 'compass', 'html', 'json','images', 'connect', 'watch']); // la que se llama default es la que se ejecuta cuando ejecutas gulp sin parametros.
