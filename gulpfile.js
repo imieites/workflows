@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
     minifyHTML = require('gulp-minify-html'),
+    jsonMinify = require('gulp-jsonminify'),
     compass = require('gulp-compass');
 
 var env,
@@ -74,7 +75,7 @@ gulp.task('watch', function(){
     gulp.watch(jsSources, ['js']);
     gulp.watch('components/sass/*.scss', ['compass']);
     gulp.watch('builds/development/*.html', ['html']); // esto lo hardcodeo porque el unico html base que hay no esta en ambos ambientes, no puedo usar outputDir
-    gulp.watch(jsonSources, ['json']);
+    gulp.watch('builds/development/js/*.json', ['json']);
 })
 
 gulp.task('html', function(){
@@ -85,7 +86,9 @@ gulp.task('html', function(){
 });
 
 gulp.task('json', function(){
-    gulp.src(jsonSources)
+    gulp.src('builds/development/js/*.json')
+    .pipe(gulpif(env === 'production', jsonMinify()))
+    .pipe(gulpif(env === 'production', gulp.dest('builds/production/js')))
     .pipe(connect.reload())
 });
 
